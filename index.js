@@ -390,7 +390,7 @@ var createDirectoryIfNotExist = function (dir_name) {
 //Create file if not exist and add the file header from the passed fields
 var createFileIfNotExist = function (filename, fields) {
     if ( !fs.existsSync(filename) ) {
-        fs.writeFileSync(filename);
+        fs.writeFileSync(filename, "");
 
         //Set file header from the pre-defined fields
         setHeaderFromFields(filename, fields);
